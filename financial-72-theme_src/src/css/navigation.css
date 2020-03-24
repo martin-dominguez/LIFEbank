@@ -1,0 +1,553 @@
+/*================================================
+Navbar Area CSS
+=================================================*/
+  a.navbar-brand {
+    padding: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 700;
+    border: solid 6px #ee0979;
+    margin-top: -5px;
+  }
+
+  .navbar-brand span {
+    margin-left: 1em;
+    color: #ee0979;
+  }
+  
+  .financial-nav {
+    background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .financial-nav .navbar {
+    padding-right: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .financial-nav .navbar .navbar-toggle,
+  .financial-nav .navbar .navbar-toggle .icon-bar {
+    color: rgba(0,0,0,.5);
+    border: solid 1px rgba(0,0,0,.1);
+  }
+  
+  .financial-nav .navbar ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+  
+  .financial-nav .navbar .navbar-nav {
+    font-family: "Raleway", sans-serif;
+    margin-left: auto;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item a {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item a:hover, .financial-nav .navbar .navbar-nav .nav-item a:focus, .financial-nav .navbar .navbar-nav .nav-item a.active {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item a i {
+    font-size: 10px;
+    margin-left: 1px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item:hover a, .financial-nav .navbar .navbar-nav .nav-item.active a {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu {
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    position: absolute;
+    border: none;
+    top: 80px;
+    left: 0;
+    width: 250px;
+    z-index: 99;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
+    padding: 7px 15px;
+    margin: 0;
+    color: #212529;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+    left: -250px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
+    left: 220px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
+    left: -250px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
+    left: -250px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
+    left: -250px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
+    left: -250px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: -15px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: -15px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: -15px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: -15px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: -15px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: -15px;
+  }
+  
+  .financial-nav .navbar .navbar-nav .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
+  
+  .financial-nav .navbar .others-options {
+    margin-left: 25px;
+    padding: 10px 0px;
+  }
+  
+  .financial-nav .navbar .others-options .login-btn {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .financial-nav .navbar .others-options .login-btn i {
+    margin-right: 5px;
+    color: #ee0979;
+  }
+  
+  .navbar-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    background-color: transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .navbar-area.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+    background-color: #ffffff !important;
+    -webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+            animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  
+  .navbar-area.is-sticky .navbar-brand {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item a {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item a:hover, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item a:focus, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item a.active {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item:hover a, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item.active a {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .others-options .login-btn {
+    color: #212529;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .others-options .login-btn i {
+    color: #ee0979;
+  }
+  
+  .navbar-area.is-sticky .financial-nav .navbar .others-options .login-btn:hover {
+    color: #ee0979;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .navbar-area {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+      background-color: #fff;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .navbar-area .navbar-brand {
+      color: #212529;
+    }
+    .navbar-area .financial-nav .navbar .navbar-nav .nav-item a {
+      color: #212529;
+    }
+    .navbar-area .financial-nav .navbar .others-options .login-btn {
+      color: #212529;
+    }
+    .navbar-area.is-sticky {
+      border-bottom: none;
+      -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+    }
+    a.navbar-brand {
+        color: #212529;
+    }
+
+    .navbar-expand-md .navbar-collapse.in {
+      margin-top: 45px;
+      font-size: 14px;
+    }
+  }
+
+
+/*================================================
+Search CSS
+=================================================*/
+.search-button {
+  float: right;
+  margin-top: 5px;
+}
+
+.search-toggle {
+	position: relative;
+	display: block;
+  z-index: inherit;
+  color: #ee0979;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+.search-toggle .icon-search {
+  font-size: 20px;
+}
+
+.search-toggle.active {
+  z-index: 9999 !important;
+}
+
+.navbar-area {
+	overflow: hidden;
+}
+
+.navbar-area .navbar-nav li {
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.2s 0.1s;
+  transition-delay: 0.3s;
+}
+.search-box {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: 100%;
+  max-height: 0;
+  border: 0;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+
+.search-box .search-input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1em;
+  border: 0;
+  background-color: transparent;
+  opacity: 0;
+  color: #212121;
+}
+
+.search-box .search-input:placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+.search-box .search-input:-ms-input-placeholder, /* Internet Explorer 10-11 */
+.search-box .search-input::-ms-input-placeholder, /* Microsoft Edge */
+.search-box .search-input::-webkit-input-placeholder { 
+  color: #212121;
+  opacity: 1; /* Firefox */
+}
+
+.financial-nav.show .search-box {
+  max-height: 80px;
+  z-index: 1;
+}
+
+.financial-nav.show .search-input {
+  opacity: 1;
+}
+
+.financial-nav.show .search-input:focus {
+  outline: solid 1px #ee0979;
+  outline-offset: 0;
+}

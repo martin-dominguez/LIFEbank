@@ -1,0 +1,525 @@
+/*================================================
+Navbar Area CSS
+=================================================*/ 
+@import 'variables';
+
+// Admin control
+.has-control-menu .navbar-area {
+  width: calc(100% - 320px) !important;
+  
+  &.is-sticky {
+    margin-top: 56px !important;
+  }
+}
+
+.financial-nav {
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+  font-family: "Raleway", sans-serif;
+
+  .navbar {
+    padding-right: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    .portlet {
+      margin-bottom: 0px;
+    }
+
+    .navbar-toggle, .navbar-toggle .icon-bar {
+      color: rgba(0,0,0,.5);
+      border: solid 1px rgba(0,0,0,.1);
+    }
+
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+      margin-bottom: 0;
+    }
+
+    .navbar-nav {
+      margin-left: auto;
+
+      .nav-item {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0;
+        padding-right: 0;
+
+        a {
+          color: #fff;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+
+        &:hover, &:focus, &.active {
+          color: $f-primary;
+        }
+
+        i {
+          font-size: 10px;
+          margin-left: 1px;
+        }
+
+        &.active a {
+          color: $f-primary;
+        }
+
+        .dropdown-menu {
+          -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+                  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+          background: #ffffff;
+          position: absolute;
+          border: none;
+          top: 80px;
+          left: 0;
+          width: 250px;
+          z-index: 99;
+          display: block;
+          opacity: 0;
+          visibility: hidden;
+          border-radius: 5px;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          padding-top: 20px;
+          padding-left: 5px;
+          padding-right: 5px;
+          padding-bottom: 20px;
+
+          li {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            a {
+              padding: 7px 15px;
+              margin: 0;
+              color: #212529;
+              font-size: 15px;
+              font-weight: 400;
+
+              &:hover, &:focus, &.active {
+                color: $f-primary;
+              }
+            }
+
+            .dropdown-menu {
+              left: -250px;
+              top: 0;
+              opacity: 0;
+              visibility: hidden;
+
+              li {
+                a {
+                  color: #212529;
+
+                  &:hover, &:focus, &.active {
+                    color: $f-primary;
+                  }
+                }
+
+                .dropdown-menu {
+                  left: 220px;
+                  top: 0;
+                  opacity: 0;
+                  visibility: hidden;
+                  
+                  li {
+                    a {
+                      color: #212529;
+                      
+                      &:hover, &:focus, &.active {
+                        color: $f-primary;
+                      }
+                    }
+                    
+                    .dropdown-menu {
+                      left: 220px;
+                      top: 0;
+                      opacity: 0;
+                      visibility: hidden;
+                      
+                      li {
+                        a {
+                          color: #212529;
+                          
+                          &:hover, &:focus, &.active {
+                            color: $f-primary;
+                          }
+                        }
+
+                        .dropdown-menu {
+                          left: 220px;
+                          top: 0;
+                          opacity: 0;
+                          visibility: hidden;
+                          
+                          li {
+                            a {
+                              color: #212529;
+                              
+                              &:hover, &:focus, &.active {
+                                color: $f-primary;
+                              }
+                            }
+                          }
+                        }
+                        
+                        &:hover .dropdown-menu {
+                          opacity: 1;
+                          visibility: visible;
+                          top: -15px;
+                        }
+
+                        &.active a { 
+                          color: $f-primary;
+                        }
+                      }
+                    }
+                    
+                    &:hover .dropdown-menu {
+                      opacity: 1;
+                      visibility: visible;
+                      top: -15px;
+                    }
+
+                    &.active a { 
+                      color: $f-primary;
+                    }
+                  } 
+                }
+                        
+                &:hover .dropdown-menu {
+                  opacity: 1;
+                  visibility: visible;
+                  top: -15px;
+                }
+
+                &.active a { 
+                  color: $f-primary;
+                }
+              }
+            }
+
+            &:hover .dropdown-menu {
+              opacity: 1;
+              visibility: visible;
+              top: -15px;
+            }
+
+            &.active a { 
+              color: $f-primary;
+            }
+          }
+        }
+
+        &:hover .dropdown-menu {
+          opacity: 1;
+          visibility: visible;
+          top: 100%;
+        }
+      }
+    }
+
+    .others-options {
+      margin-left: 25px;
+      padding: 10px 0px;
+
+      .login-btn, .sign-in {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 400;
+        font-family: "Raleway", sans-serif;
+
+        i, .lexicon-icon {
+          margin-right: 5px;
+          color: $f-primary;
+        }
+      }
+
+      .user-avatar-link {
+        display: block;
+        position: relative;
+    
+        .panel-notifications-count {
+            margin: 0;
+            position: absolute;
+            right: calc(100% - 0.75rem);
+            top: -0.35rem;
+        }
+      }
+    }
+  }
+
+  a {
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
+
+.navbar-area {    
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  padding-top: 20px;
+  
+  .navbar-nav li {
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.2s 0.1s;
+    transition-delay: 0.3s;
+  }
+
+  &.is-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+    background-color: #ffffff !important;
+    -webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+            animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+    -webkit-transition: 1s;
+    transition: 1s;
+
+    .navbar-brand {
+      color: #212529;
+    }
+
+    .financial-nav .navbar .navbar-nav .nav-item {
+      a {
+        color: #212529;
+
+        &:hover, &:focus, &.active {
+          color: $f-primary;
+        }
+      }
+
+      &:hover a, &.hover a, &.active a {
+        color: $f-primary;
+      }
+
+      .dropdown-menu li {
+        a {
+          color: #212529;
+
+          &:hover, &:focus, &.active {
+            color: $f-primary;
+          }
+        }
+
+        .dropdown-menu li {
+          a {
+            color: #212529;
+  
+            &:hover, &:focus, &.active {
+              color: $f-primary;
+            }
+          }
+
+          .dropdown-menu li {
+            a {
+              color: #212529;
+    
+              &:hover, &:focus, &.active {
+                color: $f-primary;
+              }
+            }
+
+            .dropdown-menu li {
+              a {
+                color: #212529;
+      
+                &:hover, &:focus, &.active {
+                  color: $f-primary;
+                }
+              }
+
+              .dropdown-menu li {
+                a {
+                  color: #212529;
+        
+                  &:hover, &:focus, &.active {
+                    color: $f-primary;
+                  }
+                }
+
+                &:hover a, &.hover a, &.active a {
+                  color: $f-primary;
+                }
+              }
+
+              &:hover a, &.hover a, &.active a {
+                color: $f-primary;
+              }
+            }
+
+            &:hover a, &.hover a, &.active a {
+              color: $f-primary;
+            }
+          }
+
+          &:hover a, &.hover a, &.active a {
+            color: $f-primary;
+          }
+        }    
+
+        &:hover a, &.hover a, &.active a {
+          color: $f-primary;
+        }
+      }
+    }
+
+    .financial-nav .navbar .others-options .sign-in {
+      color: #212529;
+
+      &:hover, i, .lexicon-icon {
+        color: $f-primary;
+      }
+    }
+  }
+}  
+  
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+      display: -ms-flexbox!important;
+      display: flex!important;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  }
+
+  .navbar-expand-md .navbar-collapse .portlet-navigation {
+    margin-left: auto;
+  } 
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-area {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+
+    .navbar-brand {
+      color: #212529;
+    }
+
+    .financial-nav .navbar {
+      .navbar-nav .nav-item a, .others-options .sign-in{
+        color: #212529;
+      }
+    }
+
+    &.is-sticky {
+      border-bottom: none;
+      -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .navbar-expand-md .navbar-collapse.in {
+    margin-top: 45px;
+    font-size: 14px;
+  }
+}
+
+
+/*================================================
+Search CSS
+=================================================*/
+.financial-nav{
+
+  .search-bar-search-button,
+  .search-bar-search-button-wrapper {
+    display: none;
+  }
+
+  .search-button {
+    float: right; 
+    z-index: 4;
+    margin-left: 25px;
+    padding: 10px 0px;
+    margin-top: -2px;
+  }
+
+  .search-toggle {
+    position: relative;
+    display: block;
+    z-index: inherit;
+    color: #ee0979;
+    text-decoration: none;
+    margin-top: 6px;
+  
+    &.active {
+      z-index: 9999 !important;
+    }
+    
+    .icon-search {
+      font-size: 20px;
+    }
+  }
+
+  .portlet-search-bar {
+    margin-top: -20px;
+    opacity: 0;
+    width: 100%;
+  }
+
+  .search-bar-simple {
+    position: absolute;
+    width: 100%;
+  
+    .search-bar-keywords-input {
+      width: 100%;
+      border: 0;
+      opacity: 0;
+      color: #212121;
+      background-color: #ffffff;
+      height: 80px;
+      max-height: 0;
+      transition: all 0.3s;
+    }
+  }
+
+  &.show {
+    .portlet-search-bar {
+      opacity: 1;
+    }
+
+    .search-toggle {
+      margin-right: 10px;
+      margin-top: -17px;
+    }
+
+    .search-bar-simple  {
+    z-index: 1;
+  
+      .search-bar-keywords-input {
+        opacity: 1;
+        max-height: 80px;
+    
+        &:focus {
+          outline: solid 1px $f-primary;
+          outline-offset: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import 'variables';
+
+.bg-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&.bg-image-contain {
+		background-size: contain;
+	}
+
+	&.bg-image-left {
+		background-position: left;
+	}
+
+	&.bg-image-right {
+		background-position: right;
+	}
+}
+
+.bg-white-10 {
+	background-color: rgba(white, 0.1) !important;
+}
+
+.bg-primary {
+	background-color: $f-primary !important;
+}
+
+.bg-secondary {
+	background-color: $f-secondary !important;
+}
+
+.bg-info {
+	background-color: $f-info !important;
+}
