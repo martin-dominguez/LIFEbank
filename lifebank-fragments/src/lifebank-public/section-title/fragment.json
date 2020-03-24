@@ -3,7 +3,6 @@
   "configurationPath": "configuration.json",
   "htmlPath": "index.html",
   "jsPath": "main.js",
-  "name": "Single Featured Box",
-  "thumbnailPath": "thumbnail.png",
-  "type": "section"
+  "name": "Section Title",
+  "type": "component"
 }
