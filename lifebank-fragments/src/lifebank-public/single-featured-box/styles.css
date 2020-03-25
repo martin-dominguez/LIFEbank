@@ -5,6 +5,7 @@ Featured Boxes Area CSS
   position: relative;
   z-index: 1;
   margin-top: -100px;
+  margin-bottom: 50px;
 }
 
 .featured-boxes-inner {
