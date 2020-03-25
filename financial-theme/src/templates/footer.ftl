@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6 col-md-6">
-                <div class="single-footer-widget pl-5">
+                <div class="single-footer-widget">
                     <#if show_footer_company_navigation>
                         <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "borderless") />
 
