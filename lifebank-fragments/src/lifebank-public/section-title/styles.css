@@ -7,6 +7,13 @@
   margin-bottom: 50px;
   margin-top: -9px;
 }
+.section-title.right {
+  text-align: right;
+}
+.section-title.left {
+  text-align: left;
+}
+
 .section-title h2 {
   margin-bottom: 0;
   font-size: 40px;
@@ -20,6 +27,14 @@
   margin: 15px auto 20px;
   position: relative;
   border-radius: 30px;
+}
+
+.section-title.left .bar {
+  margin: 20px 0 25px;
+}
+
+.section-title.left .bar {
+  margin: 15px 0px 20px auto;
 }
 
 .section-title .bar:before {
