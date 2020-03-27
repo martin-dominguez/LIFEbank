@@ -1,4 +1,4 @@
-<div id="navbar" class="navbar-area">
+<div id="navbar" class="navbar-area sticky-${show_sticky_header?c}">
     <div class="financial-nav">
         <div class="container">
             <#if show_header_search>
@@ -6,7 +6,7 @@
                 <@liferay.search_bar default_preferences="${preferences}" />
 			</#if>
             <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="${site_default_url}">
                     <img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
                     <#if show_site_name>
 							<h1 class="font-weight-light ml-1 mb-0 text-dark text-uppercase">${site_name}</h1>
@@ -29,11 +29,13 @@
                         <@liferay.user_personal_bar />
                     </div>
                 </div>
-                <div class="search-button">
-                    <a href="#" class="search-toggle" data-selector=".financial-nav">
-                        <i class="icon icon-search"></i>
-                    </a>
-                </div>
+                 <#if show_header_search>
+                    <div class="search-button">
+                        <a href="#" class="search-toggle" data-selector=".financial-nav">
+                            <i class="icon icon-search"></i>
+                        </a>
+                    </div>
+                </#if>
             </nav>
         </div>
     </div>

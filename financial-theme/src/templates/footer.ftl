@@ -1,47 +1,57 @@
 <footer class="footer-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-sm-6 col-md-6">
+            <div class="${footer_lg_class} col-sm-6 col-md-6">
                 <div class="single-footer-widget">
                     <div class="logo">
                         <a class="navbar-brand" style="float: none;" href="#" >LIFE<span class="bank">bank</span></a>
                         <p>Quis ipsum suspendisse ultrices gravida commodo. Risus commodo veliliee vel viverra maecenas accumsan lacus vel facilisis</p>
                     </div>
+                    <#if show_social_icons>
                     <ul class="social-links">
-                        <li><a target="_blank" href="#"><i class="icon icon-facebook"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="icon icon-twitter"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="icon icon-instagram"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="icon icon-linkedin"></i></a></li>
+                        <#if facebook_url?has_content>
+                            <li><a target="_blank" href="${facebook_url}"><i class="icon icon-facebook"></i></a></li>
+                        </#if>
+                        <#if twitter_url?has_content>
+                            <li><a target="_blank" href="${twitter_url}"><i class="icon icon-twitter"></i></a></li>
+                        </#if>
+                        <#if instagram_url?has_content>
+                            <li><a target="_blank" href="${instagram_url}"><i class="icon icon-instagram"></i></a></li>
+                        </#if>
+                        <#if linkedin_url?has_content>
+                            <li><a target="_blank" href="${linkedin_url}"><i class="icon icon-linkedin"></i></a></li>
+                        </#if>
                     </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-md-6">
-                <div class="single-footer-widget">
-                    <#if show_footer_company_navigation>
-                        <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "borderless") />
-
-                        <@liferay_portlet["runtime"]
-                            defaultPreferences=preferences
-                            instanceId="company_navigation"
-                            portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
-                        />
                     </#if>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-md-6">
-                <div class="single-footer-widget">
-                    <#if show_footer_support_navigation>
-                        <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "borderless") />
+            <#if show_footer_company_navigation>
+                <div class="${footer_lg_class} col-sm-6 col-md-6">
+                    <div class="single-footer-widget">
+                            <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "borderless") />
 
-                        <@liferay_portlet["runtime"]
-                            defaultPreferences=preferences
-                            instanceId="support_navigation"
-                            portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
-                        />
-                    </#if>
+                            <@liferay_portlet["runtime"]
+                                defaultPreferences=preferences
+                                instanceId="company_navigation"
+                                portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
+                            />
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-md-6">
+            </#if>
+            <#if show_footer_support_navigation>
+                <div class="${footer_lg_class} col-sm-6 col-md-6">
+                    <div class="single-footer-widget">
+                            <#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "borderless") />
+
+                            <@liferay_portlet["runtime"]
+                                defaultPreferences=preferences
+                                instanceId="support_navigation"
+                                portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
+                            />
+                    </div>
+                </div>
+            </#if>
+            <div class="${footer_lg_class} col-sm-6 col-md-6">
                 <div class="single-footer-widget">
                     <h2>Address</h2>
                     <ul class="footer-contact-info">
@@ -58,5 +68,3 @@
         </div>
     </div>
 </footer>
-<div class="preloader"><div class="loader"><div class="shadow"></div><div class="box"></div></div></div>
-<div class="go-top"><i class="icon icon-arrow-up"></i></div>

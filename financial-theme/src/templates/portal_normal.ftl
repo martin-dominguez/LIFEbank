@@ -23,7 +23,7 @@
 				<#include "${full_templates_path}/header.ftl" />
 			</#if>
 
-			<main id="content" role="main">
+			<main id="content" role="main" class="${portal_content_css_class}">
 				<#if selectable>
 					<@liferay_util["include"] page=content_include />
 				<#else>
@@ -46,5 +46,11 @@
 		<@liferay_util["include"] page=body_bottom_include />
 
 		<@liferay_util["include"] page=bottom_include />
+
+		<#if show_sticky_header>
+			<script type="text/javascript" src="${sticky_js_file}"></script>
+		</#if>
+		<div class="preloader"><div class="loader"><div class="shadow"></div><div class="box"></div></div></div>
+		<div class="go-top"><i class="icon icon-arrow-up"></i></div>
 	</body>
 </html>

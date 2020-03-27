@@ -6,11 +6,9 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
     $(window).scroll(function () {
         // ===== Show / Hide Sticky Menu and Scroll To Top ==== 
         if ($(document).scrollTop() > 150 ) {
-            A.one('.navbar-area').addClass('is-sticky');
             A.one('.go-top').show(true);
         } 
         else {
-            A.one('.navbar-area').removeClass('is-sticky');
             A.one('.go-top').hide(true);
         }
     });
@@ -22,7 +20,8 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
     });
     
     // ===== Set Copyright year ====
-    A.one('#spanYear').html(new Date().getFullYear());
+    var s_year = A.one('#spanYear');
+    if(s_year) { s_year.html(new Date().getFullYear()); }
 
     // ===== Search Bar ====
     $('.financial-nav').on('click', '.search-toggle', function(e) {
