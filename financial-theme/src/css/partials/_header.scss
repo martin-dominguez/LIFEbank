@@ -5,7 +5,7 @@ Navbar Area CSS
 
 // Admin control
 .has-control-menu {
-  &.open .navbar-area {
+  &.open .navbar-area.sticky-true {
     width: calc(100% - 320px) !important;
   }
 
