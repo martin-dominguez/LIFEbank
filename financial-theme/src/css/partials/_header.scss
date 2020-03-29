@@ -4,12 +4,19 @@ Navbar Area CSS
 @import 'variables';
 
 // Admin control
-.has-control-menu .navbar-area {
-  width: calc(100% - 320px) !important;
-  
-  &.is-sticky {
+.has-control-menu {
+  &.open .navbar-area {
+    width: calc(100% - 320px) !important;
+  }
+
+  .navbar-area.is-sticky {
     margin-top: 56px !important;
   }
+
+  .preloader {
+    display: none;
+  }
+
 }
 
 .financial-nav {
@@ -26,6 +33,19 @@ Navbar Area CSS
     padding-left: 0;
     padding-bottom: 0;
     margin-bottom: 0;
+
+    .navbar-brand {
+      padding: 0;
+      
+      img {
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
 
     .portlet {
       margin-bottom: 0px;
@@ -60,20 +80,17 @@ Navbar Area CSS
           padding-bottom: 0;
           margin-left: 15px;
           margin-right: 15px;
+          
+          .lexicon-icon {
+            margin-left: 1px;
+            font-size: 10px;
+            margin-top: -1px;
+          }
         }
 
-        &:hover, &:focus, &.active {
+        &:hover a, &:focus a, &.active a {
           color: $f-primary;
-        }
-
-        i {
-          font-size: 10px;
-          margin-left: 1px;
-        }
-
-        &.active a {
-          color: $f-primary;
-        }
+        }  
 
         .dropdown-menu {
           -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
@@ -235,6 +252,7 @@ Navbar Area CSS
     .others-options {
       margin-left: 25px;
       padding: 10px 0px;
+      z-index: 4;
 
       .login-btn, .sign-in {
         color: #ffffff;
@@ -265,6 +283,7 @@ Navbar Area CSS
   a {
     font-size: 17px;
     font-weight: 400;
+    z-index: 4;
   }
 }
 
@@ -276,8 +295,8 @@ Navbar Area CSS
   background-color: transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  overflow: hidden;
   padding-top: 20px;
+  padding-bottom: 20px;
   
   .navbar-nav li {
     opacity: 1;
@@ -285,7 +304,7 @@ Navbar Area CSS
     transition-delay: 0.3s;
   }
 
-  &.is-sticky {
+  &.is-sticky, &.sticky-false {
     position: fixed;
     top: 0;
     width: 100%;
@@ -298,17 +317,19 @@ Navbar Area CSS
     -webkit-transition: 1s;
     transition: 1s;
 
-    .navbar-brand {
-      color: #212529;
+    .navbar-brand img {
+        &:nth-child(1) {
+          display: none;
+        }
+        
+        &:nth-child(2) {
+          display: block;
+        }
     }
 
     .financial-nav .navbar .navbar-nav .nav-item {
       a {
         color: #212529;
-
-        &:hover, &:focus, &.active {
-          color: $f-primary;
-        }
       }
 
       &:hover a, &.hover a, &.active a {
@@ -318,46 +339,26 @@ Navbar Area CSS
       .dropdown-menu li {
         a {
           color: #212529;
-
-          &:hover, &:focus, &.active {
-            color: $f-primary;
-          }
         }
 
         .dropdown-menu li {
           a {
             color: #212529;
-  
-            &:hover, &:focus, &.active {
-              color: $f-primary;
-            }
           }
 
           .dropdown-menu li {
             a {
               color: #212529;
-    
-              &:hover, &:focus, &.active {
-                color: $f-primary;
-              }
             }
 
             .dropdown-menu li {
               a {
                 color: #212529;
-      
-                &:hover, &:focus, &.active {
-                  color: $f-primary;
-                }
               }
 
               .dropdown-menu li {
                 a {
                   color: #212529;
-        
-                  &:hover, &:focus, &.active {
-                    color: $f-primary;
-                  }
                 }
 
                 &:hover a, &.hover a, &.active a {
@@ -393,6 +394,21 @@ Navbar Area CSS
         color: $f-primary;
       }
     }
+  }
+
+  &.sticky-false {
+    position: relative;
+
+    .navbar-brand img {
+      &:nth-child(1) {
+        display: block;
+      }
+      
+      &:nth-child(2) {
+        display: none;
+      }
+  }
+
   }
 }  
   
@@ -477,8 +493,7 @@ Search CSS
   }
 
   .portlet-search-bar {
-    margin-top: -20px;
-    opacity: 0;
+    margin-top: -10px;
     width: 100%;
   }
 
@@ -500,12 +515,12 @@ Search CSS
 
   &.show {
     .portlet-search-bar {
-      opacity: 1;
+      margin-top: -20px;
     }
 
     .search-toggle {
       margin-right: 10px;
-      margin-top: -17px;
+      margin-top: 13px;
     }
 
     .search-bar-simple  {

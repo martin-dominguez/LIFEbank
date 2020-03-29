@@ -500,15 +500,6 @@ Search CSS
   z-index: 9999 !important;
 }
 
-.navbar-area {
-	overflow: hidden;
-}
-
-.navbar-area .navbar-nav li {
-  opacity: 1;
-  transition: transform 0.3s, opacity 0.2s 0.1s;
-  transition-delay: 0.3s;
-}
 .search-box {
   position: absolute;
   top: 0;

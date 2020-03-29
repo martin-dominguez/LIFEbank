@@ -2,6 +2,7 @@
 <#assign
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))
 	show_sticky_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-sticky-header"))
+	sticky_logo = getterUtil.getString(themeDisplay.getThemeSetting("sticky-logo"))
 	show_header_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header-search"))
 	show_language_selector = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-language-selector"))
 	show_footer = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-footer"))
@@ -13,6 +14,10 @@
 	instagram_url = getterUtil.getString(themeDisplay.getThemeSetting("instagram-url"))
 	linkedin_url = getterUtil.getString(themeDisplay.getThemeSetting("linkedin-url"))
 	wrap_widget_page_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("wrap-widget-page-content"))
+	location = getterUtil.getString(themeDisplay.getThemeSetting("location"))
+	email = getterUtil.getString(themeDisplay.getThemeSetting("email"))
+	phone = getterUtil.getString(themeDisplay.getThemeSetting("phone"))
+	company_description = getterUtil.getString(themeDisplay.getThemeSetting("company-description"))
 />
 
 <!-- Wrap Classes -->
@@ -29,6 +34,11 @@
 	<#assign sticky_js_file = htmlUtil.escape(portalUtil.getStaticResourceURL(request, "${javascript_folder}/sticky-header.js")) />
 <#else>
 	<#assign sticky_js_file = "" />
+</#if>
+<#if sticky_logo?has_content>
+	<#assign sticky_logo = sticky_logo />
+<#else>
+	<#assign sticky_logo = site_logo />
 </#if>
 
 <!-- Footer colums -->

@@ -1,7 +1,4 @@
-AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) {    
-    // **** ACTIONS ON LOAD ****
-    A.one('.preloader').addClass('preloader-deactivate');
-
+AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) {
     // **** ACTIONS ON SCROLL ****
     $(window).scroll(function () {
         // ===== Show / Hide Sticky Menu and Scroll To Top ==== 
@@ -12,12 +9,23 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
             A.one('.go-top').hide(true);
         }
     });
+    
+    // **** ACTIONS ON LOAD ****
+    // ===== Hide preloader ====
+    preloader = A.one('.preloader');
+    if (preloader) { preloader.addClass('preloader-deactivate'); }
 
-    // **** COMMON FUNCTIONS ****
-    // ===== Scroll to Top on Arrow Click==== 
-    A.one('.go-top').on('click', function() { 
-        $('body,html').animate({ scrollTop : 0 }, 500);
-    });
+    // ===== Scroll to Top on Arrow Click ==== 
+    var go_top = A.one('.go-top');
+    if (go_top){
+        go-top.on('click', function() { 
+            $('body,html').animate({ scrollTop : 0 }, 500);
+        });
+    }
+
+    // ===== Sytle Status Widget ====
+    var portlet_status = A.one('#portlet-status');
+    if (portlet_status) { portlet_status.addClass("container").addClass("pb-70"); }
     
     // ===== Set Copyright year ====
     var s_year = A.one('#spanYear');

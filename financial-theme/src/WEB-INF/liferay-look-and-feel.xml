@@ -10,7 +10,8 @@
 		<settings>
 			<setting configurable="false" key="color-palette" value="primary,success,danger,warning,info,dark,gray-dark,secondary,light,lighter,white"/>
 			<setting configurable="true" key="show-header" type="checkbox" value="true"/>
-			<setting configurable="true" key="show-sticky-header" type="checkbox" value="true"/>
+			<setting configurable="true" key="show-sticky-header" type="checkbox" value="false"/>
+			<setting configurable="true" key="sticky-logo" type="text" value=""/>
 			<setting configurable="true" key="show-header-search" type="checkbox" value="true"/>
 			<setting configurable="true" key="show-language-selector" type="checkbox" value="true"/><!-- not working -->
 			<setting configurable="true" key="show-footer" type="checkbox" value="true"/>
@@ -24,6 +25,11 @@
 			<setting configurable="true" key="wrap-widget-page-content" type="checkbox" value="true"/>
 			<setting configurable="false" key="show-site-name-default" value="true"/>
 			<setting configurable="false" key="show-site-name-supported" value="true"/>
+			<setting configurable="true" key="location" type="text" value=""/>
+			<setting configurable="true" key="email" type="text" value=""/>
+			<setting configurable="true" key="phone" type="text" value=""/>
+			<setting configurable="true" key="company-description" type="text" value="Quis ipsum suspendisse ultrices gravida commodo. Risus commodo veliliee vel viverra maecenas accumsan lacus vel facilisis
+"/>
 		</settings>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>

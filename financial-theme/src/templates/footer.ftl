@@ -4,8 +4,13 @@
             <div class="${footer_lg_class} col-sm-6 col-md-6">
                 <div class="single-footer-widget">
                     <div class="logo">
-                        <a class="navbar-brand" style="float: none;" href="#" >LIFE<span class="bank">bank</span></a>
-                        <p>Quis ipsum suspendisse ultrices gravida commodo. Risus commodo veliliee vel viverra maecenas accumsan lacus vel facilisis</p>
+                        <a class="navbar-brand-footer" href="${site_default_url}">
+                            <img alt="${logo_description}" class="mr-2" height="42" src="${site_logo}" />
+                            <#if show_site_name>
+                                    <h1 class="font-weight-light ml-1 mb-0 text-dark text-uppercase">${site_name}</h1>
+                            </#if>
+                        </a>
+                        <p>${company_description}</p>
                     </div>
                     <#if show_social_icons>
                     <ul class="social-links">
@@ -55,10 +60,18 @@
                 <div class="single-footer-widget">
                     <h2>Address</h2>
                     <ul class="footer-contact-info">
-                        <li><span class="mr-1">Location:</span>27 Division St, New York, NY 10002, USA</li>
-                        <li><span class="mr-1">Email:</span>infohaiper@haiper.com</li>
-                        <li><span class="mr-1">Phone:</span>+ (321) 984 754</li>
-                        <li><span class="mr-1">Fax:</span>+1-212-9876543</li>
+                        <li>
+                            <span class="mr-1"><i class="icon icon-map-marker"></i>  Location:</span>
+                            <a target="_blank" href="https://maps.google.com/?q=${location}">${location}</a>
+                        </li>
+                        <li>
+                            <span class="mr-1"><i class="icon icon-envelope-alt"></i>  Email:</span>
+                            <a href="mailto:${email}">${email}</a>
+                        </li>
+                        <li>
+                            <span class="mr-1"><i class="icon icon-phone"></i>  Phone:</span>
+                            <a href="tel:${phone}">${phone}</a>
+                        </li>
                     </ul>
                 </div>
             </div>

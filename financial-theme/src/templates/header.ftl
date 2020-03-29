@@ -8,6 +8,7 @@
             <nav class="navbar navbar-expand-md">
                 <a class="navbar-brand" href="${site_default_url}">
                     <img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+                    <img alt="${logo_description}" class="mr-2" height="50" src="${sticky_logo}" />
                     <#if show_site_name>
 							<h1 class="font-weight-light ml-1 mb-0 text-dark text-uppercase">${site_name}</h1>
 					</#if>
