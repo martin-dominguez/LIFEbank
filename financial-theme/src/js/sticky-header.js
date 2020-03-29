@@ -15,4 +15,5 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
                 $('.navbar-area').removeClass('is-sticky');
             }
         });
+    }
 });
