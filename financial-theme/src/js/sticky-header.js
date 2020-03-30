@@ -1,9 +1,13 @@
 AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) {   
     // **** LOGIN MENU ****
-    var portlet_status = A.one('#portlet-status');
+    var fix_menu = A.one('.fix_menu_login_status');
+    var portlet_login = A.one('.portlet-login');
+    var portlet_status = A.one('#portlet_status');
     
-    if (portlet_status) {
-        A.one('.navbar-area').addClass('is-sticky');
+    if (fix_menu) {
+        if (portlet_login || portlet_status) {
+            A.one('.navbar-area').addClass('is-sticky');
+        }
     } else {
         // **** ACTIONS ON SCROLL ****
         $(window).scroll(function () {

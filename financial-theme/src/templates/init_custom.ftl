@@ -2,6 +2,7 @@
 <#assign
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))
 	show_sticky_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-sticky-header"))
+	fix_menu_login_status = getterUtil.getBoolean(themeDisplay.getThemeSetting("fix-menu-login-status"))
 	sticky_logo = getterUtil.getString(themeDisplay.getThemeSetting("sticky-logo"))
 	show_header_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header-search"))
 	show_language_selector = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-language-selector"))

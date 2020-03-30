@@ -11,6 +11,7 @@
 			<setting configurable="false" key="color-palette" value="primary,success,danger,warning,info,dark,gray-dark,secondary,light,lighter,white"/>
 			<setting configurable="true" key="show-header" type="checkbox" value="true"/>
 			<setting configurable="true" key="show-sticky-header" type="checkbox" value="false"/>
+			<setting configurable="true" key="fix-menu-login-status" type="checkbox" value="true"/>
 			<setting configurable="true" key="sticky-logo" type="text" value=""/>
 			<setting configurable="true" key="show-header-search" type="checkbox" value="true"/>
 			<setting configurable="true" key="show-language-selector" type="checkbox" value="true"/><!-- not working -->

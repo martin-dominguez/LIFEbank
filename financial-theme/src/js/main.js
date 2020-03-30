@@ -1,12 +1,17 @@
 AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) {
+
+    var go_top = A.one('.go-top');
+
     // **** ACTIONS ON SCROLL ****
     $(window).scroll(function () {
         // ===== Show / Hide Sticky Menu and Scroll To Top ==== 
-        if ($(document).scrollTop() > 150 ) {
-            A.one('.go-top').show(true);
-        } 
-        else {
-            A.one('.go-top').hide(true);
+        if (go_top) {
+            if ($(document).scrollTop() > 150 ) {
+                go_top.show(true);
+            } 
+            else {
+                go_top.hide(true);
+            }
         }
     });
     
@@ -16,16 +21,19 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
     if (preloader) { preloader.addClass('preloader-deactivate'); }
 
     // ===== Scroll to Top on Arrow Click ==== 
-    var go_top = A.one('.go-top');
     if (go_top){
-        go-top.on('click', function() { 
+        go_top.on('click', function() { 
             $('body,html').animate({ scrollTop : 0 }, 500);
         });
     }
 
-    // ===== Sytle Status Widget ====
-    var portlet_status = A.one('#portlet-status');
-    if (portlet_status) { portlet_status.addClass("container").addClass("pb-70"); }
+    // ===== Sytle Status & Login Widgets ====
+    var portlet_status = A.one('#portlet_status');
+    if (portlet_status) { portlet_status.addClass("container").addClass("mt-8"); }
+    var portlet_login = A.one('.portlet-login');
+    if (portlet_login) {
+        portlet_login.addClass("mt-8");
+    }
     
     // ===== Set Copyright year ====
     var s_year = A.one('#spanYear');

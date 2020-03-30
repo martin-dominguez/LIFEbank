@@ -5,6 +5,7 @@
 | ------------- | ------------- | ------------- | ------------- |
 | show-header | checkbox | true | Shows/hides the complete header (menu, search bar, logo) |
 | show-sticky-header | checkbox | false | Enables/Disables the sticky header |
+| fix-menu-login-status | checkbox | true | Disables sticky menu in login and status (errors) pages. Only active with sticky menu. |
 | sticky-logo | text |  | Path to logo in sticky bar, if sticky bar is disabled, it doesn't have effect |
 | show-header-search | checkbox | true | Shows/hides search bar in header |
 | show-language-selector | checkbox | true | Shows/hides the language selector (not implemented yet in this version) |
