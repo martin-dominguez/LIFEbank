@@ -28,11 +28,15 @@ AUI().ready('liferay-sign-in-modal', 'event-outside', 'transition', function(A) 
     }
 
     // ===== Sytle Status & Login Widgets ====
+    var control_menu = A.one('.has-control-menu');
     var portlet_status = A.one('#portlet_status');
-    if (portlet_status) { portlet_status.addClass("container").addClass("mt-8"); }
     var portlet_login = A.one('.portlet-login');
-    if (portlet_login) {
-        portlet_login.addClass("mt-8");
+    if (control_menu) {
+        if (portlet_status) { portlet_status.addClass("container").addClass("mt-11"); }
+        if (portlet_login) { portlet_login.addClass("container").addClass("mt-11"); }
+    } else {
+        if (portlet_status) { portlet_status.addClass("container").addClass("mt-8"); }
+        if (portlet_login) { portlet_login.addClass("container").addClass("mt-8"); }
     }
     
     // ===== Set Copyright year ====

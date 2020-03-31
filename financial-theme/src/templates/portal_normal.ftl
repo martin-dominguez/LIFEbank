@@ -48,7 +48,7 @@
 		<@liferay_util["include"] page=bottom_include />
 		<#if show_sticky_header>
 			<#if fix_menu_login_status>
-				<div class="fix_menu_login_status"></div>
+				<div class="fix-menu"></div>
 			</#if>
 			<script type="text/javascript" src="${sticky_js_file}"></script>
 		</#if>
