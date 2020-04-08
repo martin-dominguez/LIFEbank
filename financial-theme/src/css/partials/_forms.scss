@@ -1,0 +1,92 @@
+/*================================================
+Forms CSS
+=================================================*/
+@import 'variables';
+
+.portlet-forms-display {
+    .ddm-form-name {
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        position: relative;
+        font-size: 18px;
+        padding-top: 20px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+            background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+            bottom: -1px;
+            left: 0;
+            width: 50px;
+            height: 2.2px;
+        }
+    }
+    .lfr-ddm-form-container {
+        margin-top: 20px;
+    }
+
+    .multi-step-divider {
+        background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+        background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    }
+
+    .multi-step-indicator-label { 
+        font-size: 0.75em;
+    }
+
+    .multi-step-icon {
+        background: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#ee0979));
+        background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+    }
+    
+    .ddm-form-page, .lfr-ddm-form-page{
+        padding-top: 0px !important;
+        /*.lfr-ddm-form-page-title {     
+        }
+        .lfr-ddm-form-page-description {
+        }*/
+    }
+
+    form {
+        .form-group {
+            margin-bottom: 20px;
+        }
+    
+        .form-control {
+            background-color: #ffffff;
+            border: none;
+            -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
+                    box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2) !important;
+            height: 50px;
+            font-family: "Raleway", sans-serif;
+            font-size: 14.5px;
+        }
+
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+        
+            .col-lg-12, .col-lg-6, .col-md-12, .col-md-6 {
+                padding-left: 10px;
+                padding-right: 10px;
+
+            }
+        }
+
+        textarea.form-control {
+            height: auto;
+            padding-top: 15px;
+            line-height: initial;
+        }
+
+        .btn {
+            margin-top: 8px;
+            -webkit-box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
+                    box-shadow: 0px 5px 28.5px 1.5px rgba(149, 152, 200, 0.2);
+        }
+    }
+
+
+}
