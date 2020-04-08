@@ -27,20 +27,23 @@ Forms CSS
         margin-top: 20px;
     }
 
-    .multi-step-divider {
-        background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
-        background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    .active {
+        .multi-step-divider {
+            background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+            background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+        }
+        
+        .multi-step-icon {
+            background: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#ee0979));
+            background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+        }
+
     }
 
     .multi-step-indicator-label { 
         font-size: 0.75em;
     }
 
-    .multi-step-icon {
-        background: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#ee0979));
-        background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
-    }
-    
     .ddm-form-page, .lfr-ddm-form-page{
         padding-top: 0px !important;
         /*.lfr-ddm-form-page-title {     
