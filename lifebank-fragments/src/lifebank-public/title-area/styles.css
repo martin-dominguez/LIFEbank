@@ -59,7 +59,8 @@ Page Title Area CSS
   font-weight: bold;
 }
 
-.page-title-content p {
+.page-title-content p,
+.page-title-content p + div {
   color: #ffffff;
   max-width: 600px;
   font-family: "Raleway", sans-serif;
