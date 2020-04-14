@@ -28,6 +28,7 @@
 
 .single-features-box .icon i::before {
   font-size: 30px;
+  margin-top: 16px;
 }
 
 .single-features-box .icon.bg-default {

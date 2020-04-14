@@ -6,7 +6,7 @@
 					"dataType": "string",
 					"defaultValue": "default",
 					"label": "Color",
-					"name": "color",
+					"name": "iconColor",
 					"type": "select",
 					"typeOptions": {
 						"validValues": [
