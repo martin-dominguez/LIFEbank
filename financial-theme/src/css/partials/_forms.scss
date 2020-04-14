@@ -27,7 +27,7 @@ Forms CSS
         margin-top: 20px;
     }
 
-    .active {
+    .active, .multi-step-item-expand {
         .multi-step-divider {
             background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
             background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
