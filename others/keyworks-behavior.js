@@ -21,6 +21,10 @@ function getCookie(cname) {
     return "";
 }
 
+function deleteCookie(cname) {
+    document.cookie = cname +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
 function setValues(value) {
     _jsObject[value] = _jsObject.hasOwnProperty(value)?_jsObject[value] + 1:1;
 }
