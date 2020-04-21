@@ -19,6 +19,11 @@ Navbar Area CSS
 
 }
 
+// Fix for editing
+.has-edit-mode-menu .financial-nav {
+  margin-top: 50px;
+}
+
 .financial-nav {
   background-color: transparent;
   padding-top: 0;
