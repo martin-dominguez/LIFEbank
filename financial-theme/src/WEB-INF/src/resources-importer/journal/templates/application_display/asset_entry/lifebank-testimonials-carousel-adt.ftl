@@ -1,4 +1,6 @@
-<!-- Asset Publisher Application Template
+<!-- Asset Publisher Application Template for Asset Publisher
+    Web Content Template: Testimonial
+
     @project: LIFEbank
     @date: 24/3/2020
     @author: martin.dominguez@liferay.com

@@ -1,3 +1,10 @@
+<!-- Blogs Application Template for Asset Publisher
+    Web Content Template: Partner Logos
+    
+    @project: LIFEbank
+    @date: 25/3/2020
+    @author: martin.dominguez@liferay.com
+-->
 <style>
     /*================================================
     Partner Area CSS
