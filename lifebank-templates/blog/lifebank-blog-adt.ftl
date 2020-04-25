@@ -1,3 +1,8 @@
+<!-- Blogs Application Template for Blog entries
+    @project: LIFEbank
+    @date: 25/3/2020
+    @author: martin.dominguez@liferay.com
+-->
 <style>
     /*================================================
     Blog Area CSS
@@ -16,11 +21,6 @@
       position: relative;
     }
     
-    .single-blog-post .blog-image img {
-        object-fit: cover;
-        height: 200px;
-    }
-    
     .single-blog-post .blog-image a {
       display: block;
     }
@@ -29,7 +29,6 @@
       -webkit-transition: 0.5s;
       transition: 0.5s;
       padding: 30px 30px 0px 30px;
-      min-height: 241px;
     }
     
     .single-blog-post .blog-post-content h3 {
@@ -37,17 +36,13 @@
       font-size: 20px;
     }
     
-    .single-blog-post .blog-readmore {
-        padding: 30px 30px 15px;
-    }
-    
-    .single-blog-post .blog-readmore .fin-btn {
+    .single-blog-post .blog-post-content .fin-btn {
       font-size: 13px;
       font-weight: 500;
     }
     
     .single-blog-post .blog-post-footer {
-      padding: 0px 30px 20px 30px;
+      padding: 15px 30px 20px 30px;
     }
     .single-blog-post .blog-post-footer a {
       color: #ee0979;
@@ -111,22 +106,19 @@
 	<#else>
 	    <div class="row">
     	<#list entries as curEntry>
-    	    <#assign
-    			assetRenderer = curEntry.getAssetRenderer()
-    			blogEntry = assetRenderer.getAssetObject()
-                entryTitle = htmlUtil.escape(assetRenderer.getTitle(locale))
-                viewURL = assetPublisherHelper.getAssetViewURL(renderRequest, renderResponse, curEntry)
-    	    />
-            <#if assetLinkBehavior != "showFullContent">
-                <#assign viewURL = assetRenderer.getURLViewInContext(renderRequest, renderResponse, viewURL) />
-            </#if>
-    	    
+            <#assign viewEntryPortletURL = renderResponse.createRenderURL() />
+			${viewEntryPortletURL.setParameter("mvcRenderCommandName", "/blogs/view_entry")}
+			<#if validator.isNotNull(curEntry.getUrlTitle())>
+				${viewEntryPortletURL.setParameter("urlTitle", curEntry.getUrlTitle())}
+			<#else>
+				${viewEntryPortletURL.setParameter("entryId", curEntry.getEntryId()?string)}
+			</#if>
     	    <div class="col-lg-4 col-md-6 ${curEntry?is_last?then('offset-lg-0 offset-md-3','')}">
     	        <div class="single-blog-post">
-    	            <#if (blogEntry.getCoverImageURL(themeDisplay))??>	
+    	            <#if (curEntry.getCoverImageURL(themeDisplay))??>	
 						<div class="blog-image">
-							<a href="${viewURL}" title="image-link">
-								<img src="${blogEntry.getCoverImageURL(themeDisplay)}" alt="thumbnail" />
+							<a href="${viewEntryPortletURL.toString()}" title="image-link">
+								<img src="${curEntry.getCoverImageURL(themeDisplay)}" alt="thumbnail" />
 							</a>
 						</div>
 					</#if>
@@ -152,7 +144,11 @@
 	                        </li>
 	                        <li>
 	                            <i class="icon icon-calendar"></i>
-                    		    ${dateUtil.getDate(blogEntry.getDisplayDate(), "dd/MMM/yyyy", locale)}
+                    		    ${dateUtil.getDate(curEntry.getStatusDate(), "dd/MMM/yyyy", locale)}
+                    		    
+								<#if blogsPortletInstanceConfiguration.enableReadingTime()>
+									- <@liferay_reading_time["reading-time"] displayStyle="simple" model=curEntry />
+								</#if>
 
 								<#if serviceLocator??>
 									<#assign
@@ -160,13 +156,17 @@
 
 										assetEntry = assetEntryLocalService.getEntry("com.liferay.blogs.model.BlogsEntry", curEntry.getEntryId())
 									/>
+
+									<#if blogsPortletInstanceConfiguration.enableViewCount()>
+										- <@liferay_ui["message"] arguments=assetEntry.getViewCount() key=(assetEntry.getViewCount()==0)?then("x-view", "x-views") />
+									</#if>
 								</#if>
 	                       </li>
 	                    </ul>
 						
 	                    <h3>
-    	                   <a href="${viewURL}">
-    					   ${entryTitle}
+    	                   <a href="${viewEntryPortletURL.toString()}">
+    					   ${htmlUtil.escape(blogsEntryUtil.getDisplayTitle(resourceBundle, curEntry))}
     					   </a>
 	                    </h3>
 	                   
@@ -174,20 +174,48 @@
 	                    <#if validator.isNotNull(curEntry.getDescription())>
 							<#assign content = curEntry.getDescription() />
 						<#else>
-							<#assign content = blogEntry.getContent() />
+							<#assign content = curEntry.getContent() />
 						</#if>
 
 						<p>${stringUtil.shorten(htmlUtil.stripHtml(content), 150)}...</p>
-	                </div>
-	                <div class="blog-readmore">
-	                    <a class="fin-btn fin-btn-primary" href="${viewURL}">
+
+	                    <a class="fin-btn fin-btn-primary" href="${viewEntryPortletURL.toString()}">
 	                        <@liferay_ui["message"] key="Read More" />
 	                    </a>
-                    </div>
-                    
+	                </div>
 	                <div class="blog-post-footer">
 						<div class="row">
 							<div class="autofit-float autofit-row autofit-row-center widget-toolbar">
+								<#if blogsPortletInstanceConfiguration.enableComments()>
+									<div class="autofit-col">
+										<#assign viewCommentsPortletURL = renderResponse.createRenderURL() />
+
+										${viewCommentsPortletURL.setParameter("mvcRenderCommandName", "/blogs/view_entry")}
+										${viewCommentsPortletURL.setParameter("scroll", renderResponse.getNamespace() + "discussionContainer")}
+
+										<#if validator.isNotNull(curEntry.getUrlTitle())>
+											${viewCommentsPortletURL.setParameter("urlTitle", curEntry.getUrlTitle())}
+										<#else>
+											${viewCommentsPortletURL.setParameter("entryId", curEntry.getEntryId()?string)}
+										</#if>
+
+										<a class="btn btn-outline-borderless btn-outline-secondary btn-sm" href="${viewCommentsPortletURL.toString()}" title="${language.get(locale, "comments")}">
+											<span class="inline-item inline-item-before">
+												<@clay["icon"] symbol="comments" />
+											</span> ${commentManager.getCommentsCount("com.liferay.blogs.model.BlogsEntry", curEntry.getEntryId())}
+										</a>
+									</div>
+								</#if>
+
+								<#if blogsPortletInstanceConfiguration.enableRatings()>
+									<div class="autofit-col">
+										<@liferay_ui["ratings"]
+									        size="sm"
+											className="com.liferay.blogs.model.BlogsEntry"
+											classPK=curEntry.getEntryId()
+										/>
+									</div>
+								</#if>
 
 								<div class="autofit-col autofit-col-end">
 									<#assign bookmarkURL = renderResponse.createRenderURL() />
@@ -195,13 +223,20 @@
 									${bookmarkURL.setWindowState(windowStateFactory.getWindowState("NORMAL"))}
 									${bookmarkURL.setParameter("mvcRenderCommandName", "/blogs/view_entry")}
 
+									<#if validator.isNotNull(curEntry.getUrlTitle())>
+										${bookmarkURL.setParameter("urlTitle", curEntry.getUrlTitle())}
+									<#else>
+										${bookmarkURL.setParameter("entryId", curEntry.getEntryId()?string)}
+									</#if>
+
 									<@liferay_social_bookmarks["bookmarks"]
 										className="com.liferay.blogs.model.BlogsEntry"
 										classPK=curEntry.getEntryId()
 										maxInlineItems=0
 										target="_blank"
 									    size="sm"
-										title=entryTitle
+										title=blogsEntryUtil.getDisplayTitle(resourceBundle, curEntry)
+										types=blogsPortletInstanceConfiguration.socialBookmarksTypes()
 										url=portalUtil.getCanonicalURL(bookmarkURL.toString(), themeDisplay, themeDisplay.getLayout())
 									/>
 								</div>

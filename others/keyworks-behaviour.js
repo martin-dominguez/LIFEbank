@@ -1,3 +1,17 @@
+/*****************************************************
+** Code to get meta-keywords from page              **
+** and store them in a cookie. Most                 **
+** visited keyword is calculated and                **
+** stored in other cookie:                          **
+**                                                  **
+**   -lfr_bhvr_obj: JSON with visit history         **
+**   -lrf_bhvr_int: String with most visited tag    **
+**                                                  **
+** @project: LIFEbank                               **
+** @date: 24/4/2020                                 **
+** @author: martin.dominguez@liferay.com            **
+*****************************************************/
+
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -9,7 +23,7 @@ function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
+    for(var i = 0; i < ca.length; i++) {
       var c = ca[i];
       while (c.charAt(0) == ' ') {
         c = c.substring(1);
@@ -59,5 +73,6 @@ function calcInterest() {
     }
 }
 
+// #### MAIN #### //
 var _jsObject = {};
 calcInterest();
