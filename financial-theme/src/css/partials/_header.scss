@@ -468,7 +468,8 @@ Search CSS
 .financial-nav{
 
   .search-bar-search-button,
-  .search-bar-search-button-wrapper {
+  .search-bar-search-button-wrapper,
+  .search-bar-simple .input-group-inset-item-after { /*Fix for FP5 */
     display: none;
   }
 
