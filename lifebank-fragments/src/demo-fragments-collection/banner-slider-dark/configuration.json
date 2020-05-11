@@ -18,9 +18,9 @@
 					"label": "Button Class Name",
 					"name": "btn",
 					"type": "text",
-            "typeOptions": {
-                "placeholder": "btn"
-            }
+					"typeOptions": {
+						"placeholder": "btn"
+					}
 				}
 			]
 		}
