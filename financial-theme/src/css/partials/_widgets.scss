@@ -1,6 +1,7 @@
 /*================================================
 Liferay Widgets CSS
 =================================================*/
+@import 'variables'; 
 /** Global **/
 #content {
     .portlet-decorate, .portlet-borderless {
@@ -16,8 +17,7 @@ Liferay Widgets CSS
             &:before {
                 content: '';
                 position: absolute;
-                background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
-                background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+                @include info-deg;
                 bottom: -1px;
                 left: 0;
                 width: 50px;
@@ -56,8 +56,7 @@ Liferay Widgets CSS
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
-                background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+                @include info-deg;
                 z-index: -1;
                 opacity: 0;
                 visibility: hidden;
@@ -69,7 +68,7 @@ Liferay Widgets CSS
 
             &:hover, &:focus {
                 color: #ffffff;
-                border-color: #ee0979;
+                border-color: $f-primary;
             }
 
             &:hover::before, &:focus::before {
@@ -102,8 +101,7 @@ Customer Area Widgets CSS
             &:before {
                 content: '';
                 position: absolute;
-                background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
-                background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+                @include info-deg;
                 bottom: -1px;
                 left: 0;
                 width: 50px;
