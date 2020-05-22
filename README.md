@@ -23,5 +23,6 @@ LIFEbank demo resources
     * office: Web Content Template and Structure for offices.
     * partner logos: ADT, Template and Structure to show in a beatiful way your partner logos.
     * testimonials: ADT, Template and Structure to whow a carousel with testimonials.
+* loan-caculator-lifebank: a customization of the loan calculator for LIFEbank theme. Based on [Evan Thibodeau work](https://github.com/ethib137/loan-calculator)
 * others: other resources
     * keywords-behaviour: a simple JS code to capture keywords from headers an calculate which of them is the most visited. Designed to use for Personalization, creating a segment with `lrf_bhvr_int = keyword`
