@@ -1,0 +1,137 @@
+{
+	"$schema": "https://raw.githubusercontent.com/liferay/liferay-js-toolkit/master/resources/schemas/configuration.schema.json",
+	"portletInstance": {
+		"name": "loan-calculator-configurations",
+		"fields": {
+			"amountLabel": {
+				"type": "string",
+				"name": "amount-label-name",
+				"description": "amount-label-description"
+			},
+			"amountUnitsSingular": {
+				"type": "string",
+				"name": "amount-units-singular-name",
+				"description": "amount-units-singular-description"
+			},
+			"amountUnitsPlural": {
+				"type": "string",
+				"name": "amount-units-plural-name",
+				"description": "amount-units-plural-description"
+			},
+			"amountUnitsPrefix": {
+				"type": "boolean",
+				"name": "amount-units-prefix-name",
+				"description": "amount-units-prefix-description",
+				"default": true
+			},
+			"amountInitValue": {
+				"type": "string",
+				"name": "amount-init-value-name",
+				"description": "amount-init-value-description"
+			},
+			"amountMinValue": {
+				"type": "string",
+				"name": "amount-min-value-name",
+				"description": "amount-min-value-description"
+			},
+			"amountMaxValue": {
+				"type": "string",
+				"name": "amount-max-value-name",
+				"description": "amount-max-value-description"
+			},
+			"amountStepSize": {
+				"type": "string",
+				"name": "amount-step-size-name",
+				"description": "amount-step-size-description"
+			},
+			"termLabel": {
+				"type": "string",
+				"name": "term-label-name",
+				"description": "term-label-description"
+			},
+			"termUnitsSingular": {
+				"type": "string",
+				"name": "term-units-singular-name",
+				"description": "term-units-singular-description"
+			},
+			"termUnitsPlural": {
+				"type": "string",
+				"name": "term-units-plural-name",
+				"description": "term-units-plural-description"
+			},
+			"termUnitsPrefix": {
+				"type": "boolean",
+				"name": "term-units-prefix-name",
+				"description": "term-units-prefix-description",
+				"default": false
+			},
+			"termInitValue": {
+				"type": "string",
+				"name": "term-init-value-name",
+				"description": "term-init-value-description"
+			},
+			"termMinValue": {
+				"type": "string",
+				"name": "term-min-value-name",
+				"description": "term-min-value-description"
+			},
+			"termMaxValue": {
+				"type": "string",
+				"name": "term-max-value-name",
+				"description": "term-max-value-description"
+			},
+			"termStepSize": {
+				"type": "string",
+				"name": "term-step-size-name",
+				"description": "term-step-size-description"
+			},
+			"monthsPerTermUnit": {
+				"type": "string",
+				"name": "months-per-term-unit-name",
+				"description": "months-per-term-unit-description"
+			},
+			"interestRateLabel": {
+				"type": "string",
+				"name": "interest-rate-label-name",
+				"description": "interest-rate-label-description"
+			},
+			"interestRateUnitsSingular": {
+				"type": "string",
+				"name": "interest-rate-units-singular-name",
+				"description": "interest-rate-units-singular-description"
+			},
+			"interestRateUnitsPlural": {
+				"type": "string",
+				"name": "interest-rate-units-plural-name",
+				"description": "interest-rate-units-plural-description"
+			},
+			"interestRateUnitsPrefix": {
+				"type": "boolean",
+				"name": "interest-rate-units-prefix-name",
+				"description": "interest-rate-units-prefix-description",
+				"default": false
+			},
+			"interestRateInitValue": {
+				"type": "string",
+				"name": "interest-rate-init-value-name",
+				"description": "interest-rate-init-value-description"
+			},
+			"interestRateMinValue": {
+				"type": "string",
+				"name": "interest-rate-min-value-name",
+				"description": "interest-rate-min-value-description"
+			},
+			"interestRateMaxValue": {
+				"type": "string",
+				"name": "interest-rate-max-value-name",
+				"description": "interest-rate-max-value-description"
+			},
+			"interestRateStepSize": {
+				"type": "string",
+				"name": "interest-rate-step-size-name",
+				"description": "interest-rate-step-size-description"
+			}
+		}
+	}
+}
+

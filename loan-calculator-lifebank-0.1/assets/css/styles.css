@@ -1,0 +1,170 @@
+.tag {
+	font-weight: bold; margin-right: 1em;
+}
+
+.value {
+	font-family: monospace;
+}
+
+.pre {
+	font-family: monospace; white-space: pre;
+}
+
+.unstyled-input {
+	border-width: 0;
+	font-size: inherit;
+	padding: 0;
+	text-align: right;
+}
+
+.unstyled-input:focus {
+	outline: none;
+}
+
+.value-container {
+	font-size: 24px;
+}
+
+/*================================================
+LOAN CALCULATOR STYLES FOR LIFEBANK
+=================================================*/
+.loanCaculator {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    border-radius: 5px;
+	margin-top: 20px;
+	text-align: center;
+}
+  
+.loanCaculator::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: #ffffff;
+    width: 96%;
+    opacity: .62;
+    height: 50%;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 3px;
+}
+  
+.loanCaculator::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: #ffffff;
+    width: 96%;
+    opacity: .62;
+    height: 50%;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 3px;
+}
+  
+.loanCaculator .form-group {
+    margin-bottom: 5px;
+    padding: 5px;
+    position: relative;
+    background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+    background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    border-radius: 5px;
+}
+
+.loanCaculator .form-group label {
+    color: #fff;
+    margin-bottom: 0;
+    display: block;
+    font-weight: 300;
+    font-size: 13.5px;
+}
+
+.loanCaculator .form-group .clay-range-input .clay-range-progress {
+    background: #44ce6f;
+}
+
+.loanCaculator .form-group .clay-range-input .clay-range-track {
+	background: #cdf1d8;
+    border-radius: 30px;
+}
+
+.loanCaculator .form-group .clay-range-input .clay-range-thumb {
+	content: '';
+    position: absolute;
+    top: 8px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #44ce6f;
+}
+
+.loanCaculator .form-group .clay-range-input .form-control-range:focus ~ .clay-range-progress .clay-range-thumb {
+	box-shadow: inset 0 0 0 0.125 #44ce6f, inset 0 0 0 0.25 #fff !important;
+}
+
+/* NOT EXISTS 
+.loanCaculator .form-group .form-control {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.loanCaculator .form-group .form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.loanCaculator .form-group .form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.loanCaculator .form-group .form-control::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.loanCaculator .form-group .form-control::placeholder {
+  color: #ffffff;
+}
+
+.loanCaculator .form-group .quote-select select option {
+  color: #212529;
+}
+*/
+.loanCaculator button {
+  margin-top: 15px;
+}
+
+.loanCaculator .btn::before {
+  background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+}
+
+.loanCaculator .btn::after {
+  background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+}
+
+.loanCaculator.terms-info {
+  margin-top: 15px;
+}
+
+.loanCaculator .terms-info p {
+  font-size: 14px;
+}
+
+.loanCaculator .terms-info p a {
+  display: inline-block;
+  color: #212529;
+}
+
+.loanCaculator .terms-info p a:hover {
+  color: #ee0979;
+}
