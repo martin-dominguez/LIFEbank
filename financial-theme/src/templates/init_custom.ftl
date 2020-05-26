@@ -19,6 +19,8 @@
 	email = getterUtil.getString(themeDisplay.getThemeSetting("email"))
 	phone = getterUtil.getString(themeDisplay.getThemeSetting("phone"))
 	company_description = getterUtil.getString(themeDisplay.getThemeSetting("company-description"))
+	show_preloader = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-preloader"))
+	show_gotop_buttom = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-gotop-button"))
 />
 
 <!-- Wrap Classes -->

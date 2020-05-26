@@ -52,7 +52,11 @@
 			</#if>
 			<script type="text/javascript" src="${sticky_js_file}"></script>
 		</#if>
-		<div class="preloader"><div class="loader"><div class="shadow"></div><div class="box"></div></div></div>
-		<div class="go-top"><i class="icon icon-arrow-up"></i></div>
+		<#if show_preloader>
+			<div class="preloader"><div class="loader"><div class="shadow"></div><div class="box"></div></div></div>
+		</#if>
+		<#if show_gotop_button>
+			<div class="go-top"><i class="icon icon-arrow-up"></i></div>
+		</#if>
 	</body>
 </html>
