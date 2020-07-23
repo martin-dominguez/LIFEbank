@@ -8,7 +8,7 @@
 | fix-menu-login-status | checkbox | true | Disables sticky menu in login and status (errors) pages. Only active with sticky menu. |
 | sticky-logo | text |  | Path to logo in sticky bar, if sticky bar is disabled, it doesn't have effect |
 | show-header-search | checkbox | true | Shows/hides search bar in header |
-| show-language-selector | checkbox | true | Shows/hides the language selector (not implemented yet in this version) |
+| show-language-selector | checkbox | true | Shows/hides the language selector |
 | show-footer | checkbox | true | Shows/hides the complete footer |
 | show-footer-company-navigation | checkbox | true | Shows/hides Company Menu in the footer (the first one) |
 | show-footer-support-navigation | checkbox | true | Shows/hides Support Menu in the footer (the second one) |
