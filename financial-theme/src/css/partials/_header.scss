@@ -253,36 +253,6 @@ Navbar Area CSS
         }
       }
     }
-
-    .others-options {
-      margin-left: 25px;
-      padding: 10px 0px;
-      z-index: 4;
-
-      .login-btn, .sign-in {
-        color: #ffffff;
-        font-size: 17px;
-        font-weight: 400;
-        font-family: "Raleway", sans-serif;
-
-        i, .lexicon-icon {
-          margin-right: 5px;
-          color: $f-primary;
-        }
-      }
-
-      .user-avatar-link {
-        display: block;
-        position: relative;
-    
-        .panel-notifications-count {
-            margin: 0;
-            position: absolute;
-            right: calc(100% - 0.75rem);
-            top: -0.35rem;
-        }
-      }
-    }
   }
 
   a {
@@ -392,7 +362,8 @@ Navbar Area CSS
       }
     }
 
-    .financial-nav .navbar .others-options .sign-in {
+    .financial-nav .navbar .other-options .sign-in,
+    .financial-nav .navbar .other-options .portlet-language .dropdown .dropdown-toggle {
       color: #212529;
 
       &:hover, i, .lexicon-icon {
@@ -443,7 +414,9 @@ Navbar Area CSS
     }
 
     .financial-nav .navbar {
-      .navbar-nav .nav-item a, .others-options .sign-in{
+      .navbar-nav .nav-item a, 
+      .other-options .sign-in,
+      .other-options .portlet-language .dropdown .dropdown-toggle {
         color: #212529;
       }
     }
@@ -461,41 +434,94 @@ Navbar Area CSS
   }
 }
 
+/*================================================
+Search Button, Language selector and Personal Bar CSS
+=================================================*/
+.financial-nav {
+  .other-options {
+    margin-left: 25px;
+    padding: 10px 0px;
+    z-index: 4;
+
+    /** PERSONAL BAR **/
+    .portlet-user-personal-bar {
+      float: left;
+      margin-right: 10px;
+      line-height: 40px;
+
+      .login-btn, .sign-in {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 400;
+        font-family: "Raleway", sans-serif;
+    
+        i, .lexicon-icon {
+          margin-right: 5px;
+          color: $f-primary;
+        }
+      }
+    
+      .user-avatar-link {
+        display: block;
+        position: relative;
+    
+        .panel-notifications-count {
+            margin: 0;
+            position: absolute;
+            right: calc(100% - 0.75rem);
+            top: -0.35rem;
+        }
+      }
+    }
+  
+    /** LANG SELECTOR **/
+    .portlet-language {
+      float: left;
+      .dropdown {
+        .dropdown-toggle {
+          background-color: transparent;
+          border: 0px;
+          color: #ffffff;
+        }
+      }
+    }
+
+  }
+
+  
+}
 
 /*================================================
 Search CSS
 =================================================*/
 .financial-nav{
+  /** SEARCH BUTTON **/
+  .search-button {
+    float: left; 
+    z-index: 6;
+    margin-left: 10px;
+
+    .search-toggle {
+      position: relative;
+      display: block;
+      z-index: inherit;
+      color: #ee0979;
+      text-decoration: none;
+    
+      &.active {
+        z-index: 9999 !important;
+      }
+      
+      .icon-search {
+        font-size: 20px;
+      }
+    }
+  }
 
   .search-bar-search-button,
   .search-bar-search-button-wrapper,
   .search-bar-simple .input-group-inset-item-after { /*Fix for FP5 */
     display: none;
-  }
-
-  .search-button {
-    float: right; 
-    z-index: 6;
-    margin-left: 25px;
-    padding: 10px 0px;
-    margin-top: -2px;
-  }
-
-  .search-toggle {
-    position: relative;
-    display: block;
-    z-index: inherit;
-    color: #ee0979;
-    text-decoration: none;
-    margin-top: 6px;
-  
-    &.active {
-      z-index: 9999 !important;
-    }
-    
-    .icon-search {
-      font-size: 20px;
-    }
   }
 
   .portlet-search-bar {
@@ -526,7 +552,6 @@ Search CSS
 
     .search-toggle {
       margin-right: 10px;
-      margin-top: 13px;
     }
 
     .search-bar-simple  {
