@@ -29,7 +29,7 @@
 LOAN CALCULATOR STYLES FOR LIFEBANK
 =================================================*/
 .loanCaculator {
-    background-color: #ffffff;
+    background-color: var(--white);
     -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
             box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
     position: relative;
@@ -44,7 +44,7 @@ LOAN CALCULATOR STYLES FOR LIFEBANK
     content: '';
     position: absolute;
     z-index: -1;
-    background: #ffffff;
+    background: var(--white);
     width: 96%;
     opacity: .62;
     height: 50%;
@@ -59,7 +59,7 @@ LOAN CALCULATOR STYLES FOR LIFEBANK
     content: '';
     position: absolute;
     z-index: -1;
-    background: #ffffff;
+    background: var(--white);
     width: 96%;
     opacity: .62;
     height: 50%;
@@ -74,13 +74,14 @@ LOAN CALCULATOR STYLES FOR LIFEBANK
     margin-bottom: 5px;
     padding: 5px;
     position: relative;
-    background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
-    background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    background: -webkit-gradient(linear, left top, right top, from(var(--primary)), to(var(--secondary)));
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
     border-radius: 5px;
 }
 
-.loanCaculator .form-group label {
-    color: #fff;
+.loanCaculator .form-group label.min,
+.loanCaculator .form-group label.max {
+    color: var(--white);
     margin-bottom: 0;
     display: block;
     font-weight: 300;
@@ -88,7 +89,7 @@ LOAN CALCULATOR STYLES FOR LIFEBANK
 }
 
 .loanCaculator .form-group .clay-range-input .clay-range-progress {
-    background: #44ce6f;
+    background: var(--ft-altbutton-secondary);
 }
 
 .loanCaculator .form-group .clay-range-input .clay-range-track {
@@ -103,11 +104,11 @@ LOAN CALCULATOR STYLES FOR LIFEBANK
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background: #44ce6f;
+    background: var(--ft-altbutton-secondary);
 }
 
 .loanCaculator .form-group .clay-range-input .form-control-range:focus ~ .clay-range-progress .clay-range-thumb {
-	box-shadow: inset 0 0 0 0.125 #44ce6f, inset 0 0 0 0.25 #fff !important;
+	box-shadow: inset 0 0 0 0.125 var(--ft-altbutton-secondary), inset 0 0 0 0.25 var(--white) !important;
 }
 
 /* NOT EXISTS 
@@ -144,12 +145,12 @@ LOAN CALCULATOR STYLES FOR LIFEBANK
 }
 
 .loanCaculator .btn::before {
-  background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+  background: linear-gradient(135deg, var(--ft-altbutton-primary) 0%, var(--ft-altbutton-secondary) 100%);
 }
 
 .loanCaculator .btn::after {
-  background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
-  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  background: -webkit-gradient(linear, left top, right top, from(var(--primary)), to(var(--secondary)));
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
 .loanCaculator.terms-info {
@@ -162,9 +163,9 @@ LOAN CALCULATOR STYLES FOR LIFEBANK
 
 .loanCaculator .terms-info p a {
   display: inline-block;
-  color: #212529;
+  color: var(--ft-text);
 }
 
 .loanCaculator .terms-info p a:hover {
-  color: #ee0979;
+  color: var(--primary);
 }

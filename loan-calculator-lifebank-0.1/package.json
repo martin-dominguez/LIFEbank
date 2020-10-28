@@ -1,6 +1,6 @@
 {
 	"name": "loan-calculator",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Loan Calculator",
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
