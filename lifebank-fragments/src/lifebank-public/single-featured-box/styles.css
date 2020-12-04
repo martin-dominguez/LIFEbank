@@ -88,8 +88,8 @@ Featured Boxes Area CSS
           transform: translateX(-50%);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: .6;
-  transition: .6;
+  -webkit-transition: .6s;
+  transition: .6s;
   font-size: 15px;
   font-weight: 400;
 }
