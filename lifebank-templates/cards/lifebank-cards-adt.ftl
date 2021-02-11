@@ -182,7 +182,7 @@
 							<#assign content = blogEntry.getContent() />
 						</#if>
 
-						<p>${stringUtil.shorten(htmlUtil.stripHtml(content), 150)}...</p>
+						<p>${htmlUtil.unescape(stringUtil.shorten(htmlUtil.stripHtml(content), 150))}...</p>
 	                </div>
 	                <div class="blog-readmore">
 	                    <a class="fin-btn fin-btn-primary" href="${viewURL}">
