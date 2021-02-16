@@ -148,7 +148,7 @@
 								<#if serviceLocator??>
 									<#assign 
 									    userLocalService = serviceLocator.findService("com.liferay.portal.kernel.service.UserLocalService")
-                                        entryUser = userLocalService.fetchUser(curEntry.getUserId())
+                      entryUser = userLocalService.fetchUser(curEntry.getUserId())
 									/>
 
 									<#if entryUser?? && !entryUser.isDefaultUser()>
