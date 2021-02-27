@@ -47,7 +47,7 @@ function calcInterest() {
     var metaKeywords = $('meta[name=keywords]').attr("content");
     if (metaKeywords) {
         var keywords = metaKeywords.split(",");
-        cookieObj = getCookie("lfr_bhvr_obj");
+        var cookieObj = getCookie("lfr_bhvr_obj");
         if (cookieObj != "") {
             _jsObject = JSON.parse(cookieObj);
         }
