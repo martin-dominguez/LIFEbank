@@ -12,7 +12,7 @@
 		"liferay-npm-bundler": "^2.18.2",
 		"webpack": "4.29.6",
 		"webpack-cli": "3.3.0",
-		"webpack-dev-server": "3.2.1"
+		"webpack-dev-server": "3.11.3"
 	},
 	"dependencies": {
 		"@clayui/slider": "^3.1.0",
